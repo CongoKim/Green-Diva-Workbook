@@ -1,59 +1,31 @@
-# Green-Diva Workbook
+# CLAUDE.md
 
-## 專案結構
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-這是一個多子專案的工作簿（monorepo-style）。每個子專案放在獨立的子目錄中。
+## 专案结构
+
+Monorepo-style 工作簿，每个子专案放在独立目录：
 
 ```
 Green-Diva-Workbook/
-├── 01-Japan-Invoice-Scanner/   # 子專案 01
-├── 02-Next-Project/            # 子專案 02（未來）
-└── ...
+├── 01-Japan-Invoice-Scanner/   # FastAPI 发票 OCR 服务（独立仓库：CongoKim/01-Japan-Invoice-Scanner）
+└── NN-Project-Name/            # 未来子专案（两位数编号 + PascalCase）
 ```
 
-### 命名規則
+每个子专案须包含 `README.md`、`.env.example` 与 `CLAUDE.md`。
 
-- 子目錄格式：`NN-Project-Name`（兩位數編號 + 連字號 + PascalCase 名稱）
-- 例：`01-Japan-Invoice-Scanner`、`02-Budget-Tracker`
+## Git 规范
 
-## Git 規範
+Commit 格式：`<type>(<scope>): <描述>`
 
-### Commit 訊息格式
+- type：`feat` / `fix` / `refactor` / `docs` / `chore` / `test`
+- scope：子专案简称，如 `japan-invoice`、`budget-tracker`
+- 分支：`main`（稳定）、`feat/<scope>/<description>`（功能开发）
 
-```
-<type>(<scope>): <簡短描述>
+## 注意
 
-<選填：詳細說明>
-```
+各子专案均为独立 Git 仓库，主目录不追踪子专案文件。子专案架构细节见各自的 `CLAUDE.md`。
 
-**type 類型：**
-- `feat` — 新功能
-- `fix` — 修復 bug
-- `refactor` — 重構（不改變行為）
-- `docs` — 文件更新
-- `chore` — 雜務（依賴更新、設定等）
-- `test` — 測試相關
-
-**scope**：子專案名稱，例如 `japan-invoice`、`budget-tracker`
-
-**範例：**
-```
-feat(japan-invoice): 新增 PDF 發票解析功能
-fix(japan-invoice): 修正日期格式解析錯誤
-chore: 更新 .gitignore
-```
-
-### 分支策略
-
-- `main` — 穩定版本，各子專案的可運行狀態
-- `feat/<scope>/<description>` — 功能開發分支
-
-## 子專案規範
-
-每個子專案應包含：
-- `README.md` — 說明用途、安裝方式、使用方式
-- `.env.example` — 環境變數範例（不 commit 實際 `.env`）
-
-## 語言
+## 语言
 
 所有回复使用**简体中文**。

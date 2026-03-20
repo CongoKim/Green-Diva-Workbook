@@ -20,6 +20,9 @@ node_modules/
 .idea/
 *.swp
 
+# Claude Code
+.claude/
+
 # 敏感資訊
 *.key
 *.pem
