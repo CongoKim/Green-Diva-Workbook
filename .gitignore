@@ -23,6 +23,9 @@ node_modules/
 # Claude Code
 .claude/
 
+# Independent subprojects
+[0-9][0-9]-*/
+
 # 敏感資訊
 *.key
 *.pem
