@@ -2,3 +2,25 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Node.js
+node_modules/
+.npm
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+
+# 敏感資訊
+*.key
+*.pem
+secrets.json
